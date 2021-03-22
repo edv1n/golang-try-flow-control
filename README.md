@@ -13,6 +13,8 @@ func main() {
 
 ```
 
+Problem: why try shall only check the last result, and return the non-last results? Also, the `with` syntax is special here.
+
 ```go
 
 func main() {
@@ -40,4 +42,12 @@ func main() {
 
 // result:
 // v is nil
+```
+
+```go
+f1() (int, string, error) {}
+
+func main() {
+  a, s, err := f1(); try err { return err }
+}
 ```
