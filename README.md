@@ -8,7 +8,7 @@ Golang proposal: nil detection and error handling with try keyword
 f1() (int, string, error) {}
 
 func main() {
-  a, s := try f1() else err { return err }
+  a, s := try f1() with err { return err }
 }
 
 ```
