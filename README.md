@@ -6,6 +6,24 @@ Golang proposal: nil detection and error handling with try keyword
 1. a way to scope `error` returned from a function which resturns more than 1 results.
 2. generalize `try` keyword, so that it is not limited to error handling
 
+## Syntax Definition
+
+Assume we have a function `f()`
+```go
+func f() (var1, var2, ...varN) { ... }
+```
+
+To use the `try` syntax for error handling
+```go
+var1, var2, ...varSecondLast := try f() with identifierOfVarN {
+  // varN available here as identifierOfVarN
+  //... code block
+}
+
+// var1, ...varSecondLast available here
+// identifierOfVarN not available here
+```
+
 ## Example
 
 ```go
