@@ -13,7 +13,7 @@ func main() {
 
 ```
 
-Problem: why try shall only check the last result, and return the non-last results? Also, the `with` syntax is special here.
+Problem: why `try` shall only check the last result, and return the non-last results? Moreover, the `with` syntax is special here.
 
 ```go
 
